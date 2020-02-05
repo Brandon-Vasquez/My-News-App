@@ -3,6 +3,7 @@ import { Container, Header, Content, Tab, Tabs, Left, Body, Right, Title } from 
 import Tab1 from './Tabs/tab1.js';
 import Tab2 from './Tabs/tab2.js';
 import Tab3 from './Tabs/tab3.js';
+
 export default class TabsExample extends Component {
   render() {
     return (
