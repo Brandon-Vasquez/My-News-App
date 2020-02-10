@@ -16,7 +16,12 @@ export default class ModalComponent extends Component {
   }
 
   handleShare = () => {
-
+    const {url, title} = this.props.articleData
+    const message = `${title}\n\nRead More @${url}\n\nShared via RN News App`
+    return Share.share(
+      {title, message, url: message},
+      {dialogTitle: `Share ${title}`}
+    )
   }
 
   render() {
@@ -35,7 +40,7 @@ export default class ModalComponent extends Component {
             <Header style={{backgroundColor:'#66b266'}}>
               <Left>
                 <Button onPress={this.handleClose} transparent>
-                  <Icon name="close" style={{color: '#fff', fontSize: 12}}></Icon>
+                  <Icon name="close" style={{color: '#fff', fontSize: 28}}></Icon>
                 </Button>
               </Left>
               <Body>
@@ -43,7 +48,7 @@ export default class ModalComponent extends Component {
               </Body>
               <Right>
                 <Button onPress={this.handleShare} transparent>
-                  <Icon name="share" style={{color: '#fff', fontSize: 12}}></Icon>
+                  <Icon name="share" style={{color: '#fff', fontSize: 28}}></Icon>
                 </Button>
               </Right>
             </Header>
