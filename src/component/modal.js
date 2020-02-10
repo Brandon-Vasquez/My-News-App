@@ -3,6 +3,8 @@ import { Dimensions, Modal, Share } from 'react-native'
 import { WebView } from 'react-native-webview'
 import { Container, Header, Content, Body, Left, Icon, Right, Title, Button } from 'native-base'
 
+const webViewHeight = Dimensions.get('window').height - 56
+
 export default class ModalComponent extends Component {
 
   constructor(props) {
@@ -20,6 +22,8 @@ export default class ModalComponent extends Component {
   render() {
     const { showModal, articleData } = this.props
     const { url } = articleData
+    if( url != undefined ) {
+
     return (
       <Modal
         animationType="slide"
@@ -43,7 +47,7 @@ export default class ModalComponent extends Component {
                 </Button>
               </Right>
             </Header>
-            <Content>
+            <Content contentContainerStyle={{height: webViewHeight}}>
               <WebView source={{uri: url}} style={{flex: 1}} 
               onError={this.handleClose} startInLoadingState
               scalesPageToFit
@@ -52,5 +56,8 @@ export default class ModalComponent extends Component {
           </Container>
       </Modal>
     )
+    } else {
+        return null
+    }
   }
 }
