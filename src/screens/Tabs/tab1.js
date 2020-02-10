@@ -33,7 +33,7 @@ export default class ListThumbnailExample extends Component {
   }
 
   componentDidMount() {
-    getArticles().then(data => {
+    getArticles('world').then(data => {
       this.setState({
         isLoading: false,
         data: data
