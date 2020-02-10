@@ -13,8 +13,7 @@ export default class DataItem extends Component {
     return(
       <ListItem thumbnail>
         <Left>
-          <Thumbnail square source={{ uri: this.data.urlToImage !=
-          null ? this.data.urlToImage : 'https://esemag.com/wp-content/uploads/2015/11/News-Items.jpg'}} />
+          <Thumbnail square source={{ uri: this.data.multimedia[1].url }} />
         </Left>
         <Body>
           <Text numberOfLines={2}>{this.data.title}</Text>
