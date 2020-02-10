@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Alert, View, ActivityIndicator, Text } from 'react-native'
 import { Container, Header, Content, List, ListItem, Thumbnail, Left, Body, Right, Button } from 'native-base';
 import DataItem from '../../component/data-item'
+import Modal from '../../component/modal'
 import { getArticles } from '../../service/news'
 
 export default class ListThumbnailExample extends Component {
@@ -11,8 +12,24 @@ export default class ListThumbnailExample extends Component {
 
     this.state = {
       isLoading: true,
-      data: null
+      data: null,
+      setModalVisible: false,
+      modalArticleData: {}
     }
+  }
+
+  handleItemDataOnPress = (articleData) => {
+    this.setState({
+      setModalVisible: true,
+      modalArticleData: articleData
+    })
+  }
+
+  handleModalClose = () => {
+    this.setState({
+      setModalVisible: false,
+      modalArticleData: {}
+    })
   }
 
   componentDidMount() {
@@ -38,7 +55,7 @@ export default class ListThumbnailExample extends Component {
       <List
         dataArray={this.state.data}
         renderRow={(item) =>{
-          return <DataItem data={item} />
+          return <DataItem onPress={this.handleItemDataOnPress} data={item} />
         }}
       />
     )
@@ -48,6 +65,11 @@ export default class ListThumbnailExample extends Component {
         <Content>
           {view}
         </Content>
+        <Modal
+          showModal={this.state.setModalVisible}
+          articleData={this.state.modalArticleData}
+          onClose={this.handleModalClose}
+        />
       </Container>
     );
   }
