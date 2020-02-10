@@ -18,9 +18,9 @@ export default class DataItem extends Component {
         </Left>
         <Body>
           <Text numberOfLines={2}>{this.data.title}</Text>
-          <Text note numberOfLines={2}>{this.data.description}</Text>
+          <Text note numberOfLines={2}>{this.data.abstract}</Text>
           <View style={{ flex: 1, flexDirection: 'row', marginTop: 5, marginLeft: 0 }}>
-            <TimeAgo time={this.data.publishedAt} />
+            <TimeAgo time={this.data.published_date} />
           </View>
         </Body>
         <Right>
