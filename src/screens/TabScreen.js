@@ -19,19 +19,19 @@ export default class TabsExample extends Component {
           <Tab tabStyle={{backgroundColor: '#99cc99'}} 
           activeTabStyle={{backgroundColor: '#e5f2e5'}}
           textStyle={{color: '#fff'}} 
-          activeTextStyle={{color: '#66b266'}} heading="Top Stories">
+          activeTextStyle={{color: '#66b266'}} heading="World">
             <Tab1 />
           </Tab>
           <Tab tabStyle={{backgroundColor: '#99cc99'}} 
           activeTabStyle={{backgroundColor: '#e5f2e5'}} 
           textStyle={{color: '#fff'}} 
-          activeTextStyle={{color: '#66b266'}} heading="Most Popular">
+          activeTextStyle={{color: '#66b266'}} heading="Science">
             <Tab2 />
           </Tab>
           <Tab tabStyle={{backgroundColor: '#99cc99'}} 
           activeTabStyle={{backgroundColor: '#e5f2e5'}} 
           textStyle={{color: '#fff'}} 
-          activeTextStyle={{color: '#66b266'}} heading="Movie Reviews">
+          activeTextStyle={{color: '#66b266'}} heading="Arts">
             <Tab3 />
           </Tab>
         </Tabs>
