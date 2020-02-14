@@ -8,10 +8,10 @@ export default class TabsExample extends Component {
   render() {
     return (
       <Container>
-        <Header style={{backgroundColor: '#66b266' }}hasTabs>
-        <Left/>
-          <Body>
-            <Title style={{color:'#fff'}}>News App</Title>
+        <Header style={{backgroundColor: '#66b266'}} hasTabs>
+        <Left />
+          <Body style={{flex: 3}}>
+            <Title style={{color:'#fff'}}>Right Now News</Title>
           </Body>
           <Right />
         </Header>
