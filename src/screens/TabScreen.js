@@ -8,30 +8,30 @@ export default class TabsExample extends Component {
   render() {
     return (
       <Container>
-        <Header style={{backgroundColor: '#66b266'}} hasTabs>
+        <Header style={{backgroundColor: '#aec7d3'}} hasTabs>
         <Left />
           <Body style={{flex: 3}}>
             <Title style={{color:'#fff'}}>Right Now News</Title>
           </Body>
           <Right />
         </Header>
-        <Tabs tabBarUnderlineStyle={{backgroundColor: '#66b266'}}>
-          <Tab tabStyle={{backgroundColor: '#99cc99'}} 
-          activeTabStyle={{backgroundColor: '#e5f2e5'}}
+        <Tabs tabBarUnderlineStyle={{backgroundColor: '#616f75'}}>
+          <Tab tabStyle={{backgroundColor: '#c2deeb'}} 
+          activeTabStyle={{backgroundColor: '#e0eef5'}}
           textStyle={{color: '#fff'}} 
-          activeTextStyle={{color: '#66b266'}} heading="World">
+          activeTextStyle={{color: '#616f75'}} heading="World">
             <Tab1 />
           </Tab>
-          <Tab tabStyle={{backgroundColor: '#99cc99'}} 
-          activeTabStyle={{backgroundColor: '#e5f2e5'}} 
+          <Tab tabStyle={{backgroundColor: '#c2deeb'}} 
+          activeTabStyle={{backgroundColor: '#e0eef5'}} 
           textStyle={{color: '#fff'}} 
-          activeTextStyle={{color: '#66b266'}} heading="Science">
+          activeTextStyle={{color: '#616f75'}} heading="Science">
             <Tab2 />
           </Tab>
-          <Tab tabStyle={{backgroundColor: '#99cc99'}} 
-          activeTabStyle={{backgroundColor: '#e5f2e5'}} 
+          <Tab tabStyle={{backgroundColor: '#c2deeb'}} 
+          activeTabStyle={{backgroundColor: '#e0eef5'}} 
           textStyle={{color: '#fff'}} 
-          activeTextStyle={{color: '#66b266'}} heading="Arts">
+          activeTextStyle={{color: '#616f75'}} heading="Arts">
             <Tab3 />
           </Tab>
         </Tabs>
