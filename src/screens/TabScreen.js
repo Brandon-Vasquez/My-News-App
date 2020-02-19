@@ -11,7 +11,7 @@ export default class TabsExample extends Component {
         <Header style={{backgroundColor: '#aec7d3'}} hasTabs>
         <Left />
           <Body style={{flex: 3}}>
-            <Title style={{color:'#fff'}}>Right Now News</Title>
+            <Title style={{color:'#fff'}}>Right Now News App</Title>
           </Body>
           <Right />
         </Header>
